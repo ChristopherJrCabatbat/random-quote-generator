@@ -1,11 +1,90 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
 
+/* Light theme styles */
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.navbar {
+  background-color: #ffffff;
+}
+
 .card {
-  opacity: 0;
-  animation-duration: 0.8s;
-  animation-fill-mode: forwards;
-  position: relative;
+  background-color: #ffffff;
+}
+
+input,
+select {
+  background-color: #ffffff;
+  color: #212529;
+}
+
+.btn-outline-light {
+  color: #212529;
+  border-color: #212529;
+}
+
+.btn-outline-light .fas {
+  color: #212529;
+}
+
+/* Light theme specific button hover styles */
+body:not(.night-mode) .btn-outline-light:hover {
+  border-color: #212529;
+  background-color: #e9ecef;
+}
+
+/* Dark theme styles */
+body.night-mode {
+  background-color: #212529;
+  color: #e9ecef;
+}
+
+.navbar.night-mode {
+  background-color: #343a40;
+}
+
+.card.night-mode {
+  background-color: #495057;
+}
+
+input.night-mode,
+select.night-mode {
+  background-color: #495057;
+  color: #e9ecef;
+  border-color: #6c757d;
+}
+
+input.night-mode:focus,
+select.night-mode:focus {
+  background-color: #495057;
+  color: #e9ecef;
+}
+
+input.night-mode:active,
+select.night-mode:active {
+  background-color: #495057;
+  color: #e9ecef;
+}
+
+/* Button styles for night mode */
+body.night-mode .btn-outline-light {
+  color: #e9ecef !important;
+  border-color: #e9ecef;
+}
+
+body.night-mode .btn-outline-light .fas {
+  color: #e9ecef;
+}
+
+body.night-mode .btn-outline-light:active {
+  background-color: #495057;
+}
+
+body.night-mode .btn-outline-light:hover {
+  background-color: #495057;
 }
 
 .button-container {
@@ -25,9 +104,6 @@
   position: relative;
   border-radius: 50%;
 }
-/* 
-.btn-icon {
-} */
 
 .btn-icon::after {
   content: attr(title);
@@ -50,7 +126,6 @@
   opacity: 1;
   visibility: visible;
 }
-
 
 select:hover {
   cursor: pointer;

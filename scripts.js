@@ -219,3 +219,34 @@ function downloadQuote(element) {
     link.click();
   });
 }
+
+
+
+document.getElementById('night-mode-toggle').addEventListener('click', () => {
+  const body = document.body;
+  const navbar = document.querySelector('.navbar');
+  const themeIcon = document.getElementById('theme-icon');
+  const themeText = document.getElementById('theme-text');
+
+  body.classList.toggle('night-mode');
+  navbar.classList.toggle('night-mode');
+
+  // Toggle input and select fields to match the night mode
+  document.querySelectorAll('input, select').forEach(element => {
+    element.classList.toggle('night-mode');
+  });
+
+  // Toggle button styles for night mode
+  document.querySelectorAll('.btn-outline-light').forEach(button => {
+    button.classList.toggle('night-mode');
+  });
+
+  // Update the icon and text based on the current theme
+  if (body.classList.contains('night-mode')) {
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    themeText.textContent = 'Night Mode';
+  } else {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+    themeText.textContent = 'Light Mode';
+  }
+});
