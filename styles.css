@@ -1,0 +1,32 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+
+.card {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.custom-bg-dark-blue {
+  background-color: #003366;
+} /* Dark Blue */
+.custom-bg-dark-green {
+  background-color: #004d00;
+} /* Dark Green */
+.custom-bg-dark-red {
+  background-color: #660000;
+} /* Dark Red */
+.custom-bg-dark-brown {
+  background-color: #3b2f2f;
+} /* Dark Brown */
+.custom-bg-dark-gray {
+  background-color: #4d4d4d;
+} /* Dark Gray */
+.custom-bg-dark-purple {
+  background-color: #3c0042;
+} /* Dark Purple */
+.custom-bg-dark-teal {
+  background-color: #004d40;
+} /* Dark Teal */
+.custom-bg-dark-maroon {
+  background-color: #4a0c0c;
+} /* Dark Maroon */

@@ -23,8 +23,7 @@
 
     <main>
       <div
-        class="container text-center p-5 mt-5 d-flex flex-column justify-content-center align-items-center height-100"
-        style="height: 80vh"
+        class="container text-center p-5 mt-5 d-flex flex-column justify-content-center align-items-center"
       >
         <div class="container top">
           <h1 class="h2 fw-bold">Random Quote Generator</h1>
@@ -46,6 +45,8 @@
                 class="form-control"
                 id="number_quotes"
                 aria-describedby="number_quotes"
+                min="1"
+                max="5"
               />
             </div>
             <div class="mb-3">
@@ -70,7 +71,7 @@
             </div>
           </form>
         </div>
-        <div id="quote-container" class="mt-5"></div>
+        <div id="quote-container" class="mt-5 w-75"></div>
       </div>
     </main>
 
