@@ -35,7 +35,7 @@
           </p>
         </div>
         <div class="form container w-50 p-3 text-start">
-          <form action="quote-generated.html" class="border rounded border-2 p-4">
+          <form id="quote-form" class="border rounded border-2 p-4">
             <div class="mb-3">
               <label for="number_quotes" class="form-label"
                 >Enter Number of Quotes</label
@@ -55,8 +55,10 @@
               <select
                 required
                 class="form-select"
+                id="type_quotes"
                 aria-label="Default select example"
               >
+                <option value="" selected disabled>Select Type of Quote</option>
                 <option value="Random">Random</option>
               </select>
             </div>
@@ -68,13 +70,14 @@
             </div>
           </form>
         </div>
+        <div id="quote-container" class="mt-5"></div>
       </div>
     </main>
 
     <footer></footer>
 
     <script src="js/bootstrap.js"></script>
-    <!-- Popper -->
     <script src="js/bootstrap.bundle.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
