@@ -1,9 +1,59 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css";
 
 .card {
   opacity: 0;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
+  position: relative;
+}
+
+.button-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+.btn-icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+}
+/* 
+.btn-icon {
+} */
+
+.btn-icon::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+}
+
+.btn-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+select:hover {
+  cursor: pointer;
 }
 
 .custom-bg-dark-blue {
